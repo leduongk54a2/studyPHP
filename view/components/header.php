@@ -27,7 +27,22 @@
             color: red;
             cursor: pointer;
         }
-
+        .form-root {
+            position: relative;
+            padding: 20px;
+            width: fit-content;
+            margin: auto;
+            border: solid 1px;
+            border-radius: 20px;
+        }
+        .title {
+            position: absolute;
+            top: 0;
+            left: 42%;
+            transform: translateY(-15px);
+            font-size: 22px;
+            background: #fff;
+        }
         .form-wrapper {
             width: 330px;
             display: flex;
@@ -54,6 +69,21 @@
         }
         .captcha-text {
             color: red;
+        }
+
+        .btn-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row-reverse;
+        }
+
+        .btn-wrapper .btn {
+            border: solid 1px #cce6ff;
+            padding: 5px 10px;
+            border-radius: 40px;
+            background: #cce6ff;
+            cursor: pointer;
         }
     </style>
 </head>
