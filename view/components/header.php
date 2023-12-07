@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +10,37 @@
         body {
             margin: 0;
             padding: 0;
+        }
+        .flex {
+            display: flex;
+        }
+        .flex-end {
+            justify-content: end;
+        }
+        .item-center {
+            justify-content: center;
+            align-items: center;
+        }
+        .margin-right-15 {
+            margin-right: 15px;
+        }
+        .margin-bottom-30 {
+            margin-bottom: 30px;
+        }
+        .margin-left-auto {
+            margin-left: auto;
+        }
+        .padding-20 {
+            padding: 20px;
+        }
+        .font-size-20 {
+            font-size: 20px;
+        }
+        .bg-gray {
+            background-color: darkgray;
+        }
+        .width-100 {
+            width: 100%;
         }
         .header-app {
             width: 100vw;
@@ -67,7 +100,7 @@
             flex: 0 0 57%;
             max-width: 57%;
         }
-        .captcha-text {
+        .text-red {
             color: red;
         }
 

@@ -19,10 +19,10 @@
 
             <div class="row-wrapper">
                 <label for="captcha"></label>
-                <div class="col-40 captcha-text"><?php  session_start(); $captcha = generateCaptcha(); echo $captcha; $_SESSION["captcha"] = $captcha;?></div>
+                <div class="col-40 text-red"><?php  session_start(); $captcha = generateCaptcha(); echo $captcha; $_SESSION["captcha"] = $captcha;?></div>
                 <input class="col-60" type="text" id="captcha" name="captcha" required>
             </div>
-            <div class="captcha-text">
+            <div class="text-red">
                 <?php
                 if(isset($_SESSION["errorMessage"]) && strlen($_SESSION["errorMessage"])) {
                     echo $_SESSION["errorMessage"];

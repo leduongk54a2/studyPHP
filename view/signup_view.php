@@ -5,7 +5,7 @@
     <a class="login-btn" href="./signin_view.php" >Login</a>
 </div>
 <form class="form-root" action="../controller/signup_handler.php" method="post">
-    <div class="title">Sign Up</div>
+    <div class="title">Sign in</div>
     <div class="form-wrapper">
         <div class="row-wrapper">
             <label class="col-40" for="username">User Name:</label>
@@ -24,10 +24,10 @@
 
         <div class="row-wrapper">
             <label for="captcha"></label>
-            <div class="col-40 captcha-text"><?php  session_start(); $captcha = generateCaptcha(); echo $captcha; $_SESSION["captcha"] = $captcha;?></div>
+            <div class="col-40 text-red"><?php $captcha = generateCaptcha(); echo $captcha; $_SESSION["captcha"] = $captcha;?></div>
             <input class="col-60" type="text" id="captcha" name="captcha" required>
         </div>
-        <div class="captcha-text">
+        <div class="text-red">
             <?php
                 if(isset($_SESSION["errorMessage"]) && strlen($_SESSION["errorMessage"])) {
                     echo $_SESSION["errorMessage"];
