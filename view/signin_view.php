@@ -1,4 +1,4 @@
-<?php include('../function_common/generate_captcha.php') ?>
+<?php session_start(); include('../function_common/generate_captcha.php') ?>
 <?php include('./components/header.php'); ?>
     <div class="login-btn-wrapper">
         <span>Don't have an account</span>
@@ -19,7 +19,7 @@
 
             <div class="row-wrapper">
                 <label for="captcha"></label>
-                <div class="col-40 text-red"><?php  session_start(); $captcha = generateCaptcha(); echo $captcha; $_SESSION["captcha"] = $captcha;?></div>
+                <div class="col-40 text-red"><?php   $captcha = generateCaptcha(); echo $captcha; $_SESSION["captcha"] = $captcha;?></div>
                 <input class="col-60" type="text" id="captcha" name="captcha" required>
             </div>
             <div class="text-red">

@@ -17,6 +17,9 @@
         .flex-end {
             justify-content: end;
         }
+        .flex-around {
+            justify-content: space-around;
+        }
         .item-center {
             justify-content: center;
             align-items: center;
@@ -24,11 +27,16 @@
         .margin-right-15 {
             margin-right: 15px;
         }
+
+        .margin-top-30 {
+            margin-top: 30px !important;
+        }
         .margin-bottom-30 {
             margin-bottom: 30px;
         }
-        .margin-left-auto {
-            margin-left: auto;
+
+        .margin-auto {
+            margin: auto;
         }
         .padding-20 {
             padding: 20px;
@@ -41,6 +49,12 @@
         }
         .width-100 {
             width: 100%;
+        }
+        .width-fit {
+            width: fit-content;
+        }
+        .position-relative {
+            position: relative;
         }
         .header-app {
             width: 100vw;
@@ -68,6 +82,7 @@
             border: solid 1px;
             border-radius: 20px;
         }
+
         .title {
             position: absolute;
             top: 0;
@@ -117,6 +132,31 @@
             border-radius: 40px;
             background: #cce6ff;
             cursor: pointer;
+        }
+
+        .table-root {
+            width: 40vw;
+            margin: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            padding:0;
+        }
+        td,th {
+            border: 1px solid #ddd;
+            height: 100%;
+            text-align: center !important;
+        }
+        tr:nth-child(even){background-color: #f2f2f2;}
+        tr:hover {background-color: #ddd;}
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: blue;
+            color: white;
+        }
+        .line-height-25 {
+            line-height: 25.5px;
         }
     </style>
 </head>

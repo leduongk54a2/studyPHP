@@ -1,17 +1,7 @@
 <?php
 session_start();
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "studyphp";
-
-$connect = mysqli_connect($servername, $username, $password, $dbname);
-
-if (!$connect) {
-    die("Kết nối đến cơ sở dữ liệu thất bại: " . mysqli_connect_error());
-}
-
+require_once("../function_common/db_connection.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $oldPassword = $_POST["old_password"];
     $newPassword = $_POST["new_password"];
