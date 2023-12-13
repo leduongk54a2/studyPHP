@@ -1,3 +1,7 @@
+
+<?php
+    session_start();
+?>
 <?php include('../function_common/generate_captcha.php') ?>
 <?php include('./components/header.php'); ?>
 <div class="login-btn-wrapper">
@@ -5,7 +9,7 @@
     <a class="login-btn" href="./signin_view.php" >Login</a>
 </div>
 <form class="form-root" action="../controller/signup_handler.php" method="post">
-    <div class="title">Sign in</div>
+    <div class="title">Sign up</div>
     <div class="form-wrapper">
         <div class="row-wrapper">
             <label class="col-40" for="username">User Name:</label>
@@ -24,7 +28,7 @@
 
         <div class="row-wrapper">
             <label for="captcha"></label>
-            <div class="col-40 text-red"><?php $captcha = generateCaptcha(); echo $captcha; $_SESSION["captcha"] = $captcha;?></div>
+            <div class="col-40 text-red"><?php  $captcha = generateCaptcha(); echo $captcha; $_SESSION["captcha"] = $captcha;?></div>
             <input class="col-60" type="text" id="captcha" name="captcha" required>
         </div>
         <div class="text-red">

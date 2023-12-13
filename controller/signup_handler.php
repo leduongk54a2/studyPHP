@@ -26,9 +26,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($captcha !==  $_SESSION["captcha"]) {
         $_SESSION["errorMessage"] .= "Captcha không đúng." ."<br/>";
     }
-    $checkQuery = "SELECT * FROM Users WHERE username = '$username'";
+    $checkQuery = "SELECT EXISTS(SELECT username FROM Users WHERE username = '$username') exist";
     $checkResult = mysqli_query($connect, $checkQuery);
-    if (mysqli_num_rows($checkResult) > 0) {
+    $result = mysqli_fetch_assoc($checkResult);
+    if ($result["exist"] > 0) {
         $_SESSION["errorMessage"] .= "Username đã tồn tại. Chọn username khác." ."<br/>";
     }
 

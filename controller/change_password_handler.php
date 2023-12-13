@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $regexPassWord= "/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/";
 
     $username = $_SESSION["username"];
-    $checkQuery = "SELECT * FROM Users WHERE username = '$username'";
+    $checkQuery = "SELECT password FROM Users WHERE username = '$username'";
     $checkResult = mysqli_query($connect, $checkQuery);
 
     if (mysqli_num_rows($checkResult) > 0) {

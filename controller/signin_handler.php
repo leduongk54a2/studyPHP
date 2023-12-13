@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($captcha !==  $_SESSION["captcha"]) {
         $_SESSION["errorMessage"] .= "Captcha không đúng." ."<br/>";
     }
-    $checkQuery = "SELECT * FROM Users WHERE username = '$username'";
+    $checkQuery = "SELECT password FROM Users WHERE username = '$username'";
     $checkResult = mysqli_query($connect, $checkQuery);
 
     if (mysqli_num_rows($checkResult) > 0) {

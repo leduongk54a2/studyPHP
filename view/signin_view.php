@@ -2,7 +2,7 @@
 <?php include('./components/header.php'); ?>
     <div class="login-btn-wrapper">
         <span>Don't have an account</span>
-        <a class="login-btn" href="./signup_view.php" >Login</a>
+        <a class="login-btn" href="./signup_view.php" >sign up</a>
     </div>
     <form class="form-root" action="../controller/signin_handler.php" method="post">
         <div class="title">Sign In</div>
